@@ -6,13 +6,11 @@ public class Main {
     public static void main(String[] args) {
         String name = "Naledi";
         int age = 20;
-        double avgMark = 76.5;
-        boolean isRegistered = true;
+        double avgMark = 76.6;
+        boolean isRegisterd = true;
 
+        studentDetails st = new studentDetails(name,age,avgMark,isRegisterd);
 
-        System.out.println("Student Name: " + name +
-                            "\n Age: " + age +
-                            "\n Average Mark: " + avgMark +
-                             "\n Registered: " + isRegistered);
+        System.out.println(st.toString());
         }
     }
