@@ -4,8 +4,10 @@ package org.codewiththamsanqa;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        PassOrFail pf = new PassOrFail();
+        StudentMarks sm = new StudentMarks();
 
-        pf.passOrFail();
+        sm.printMarks();
+
+
         }
     }
