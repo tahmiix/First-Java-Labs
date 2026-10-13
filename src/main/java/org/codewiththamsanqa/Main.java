@@ -4,13 +4,10 @@ package org.codewiththamsanqa;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        String name = "Naledi";
-        int age = 20;
-        double avgMark = 76.6;
-        boolean isRegisterd = true;
+           GradeCalculator gc = new GradeCalculator();
 
-        studentDetails st = new studentDetails(name,age,avgMark,isRegisterd);
+           String result =  gc.stuGrade();
 
-        System.out.println(st.toString());
+           System.out.println("Student mark: " + result);
         }
     }

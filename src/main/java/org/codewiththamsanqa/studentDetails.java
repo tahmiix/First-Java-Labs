@@ -1,11 +1,15 @@
 package org.codewiththamsanqa;
 
 public class studentDetails {
-    String name;
-    int age;
-    double avgMark;
-    boolean isRegistered;
+    String name = "Thamsanqa";
+    int age = 20;
+    double avgMark = 78.9;
+    boolean isRegistered = true;
 
+    studentDetails(){
+
+
+    }
     studentDetails(String name, int age, double avgMark, boolean isRegisterd){
         this.name = name;
         this.age = age;
