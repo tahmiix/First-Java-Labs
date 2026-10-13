@@ -4,10 +4,8 @@ package org.codewiththamsanqa;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-           GradeCalculator gc = new GradeCalculator();
+        PassOrFail pf = new PassOrFail();
 
-           String result =  gc.stuGrade();
-
-           System.out.println("Student mark: " + result);
+        pf.passOrFail();
         }
     }

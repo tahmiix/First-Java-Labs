@@ -3,7 +3,7 @@ package org.codewiththamsanqa;
 public class GradeCalculator {
     int mark = -1;
 
-    public String stuGrade() {
+    public void stuGrade() {
         String result;
 
         if (this.mark >= 0 && this.mark <= 49) {
@@ -26,6 +26,6 @@ public class GradeCalculator {
 
             result = "Invalid Mark";
         }
-        return result;
+        System.out.println(result);
     }
 }

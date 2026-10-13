@@ -4,7 +4,7 @@ public class LoginCheck {
     String username = "tahmiix@gmail.com";
     String password = "12345678";
 
-public String checkCredentials(){
+public void checkCredentials(){
     String dUserName = "tahmiix@gmail.com";
     String dPassword = "12345678";
     String result;
@@ -16,6 +16,6 @@ public String checkCredentials(){
         result = "Invalid Credentials";
     }
 
-    return result;
+    System.out.println(result);
 }
 }

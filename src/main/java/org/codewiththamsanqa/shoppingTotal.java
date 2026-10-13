@@ -5,14 +5,14 @@ public class shoppingTotal {
     double price = 100;
     int quantity = 2;
 
- public double amountDue(){
+ public void amountDue(){
      double amountDue;
      amountDue = this.price  * this.quantity ;
 
-     return amountDue;
+     System.out.println("Amount Due: " + amountDue);
  }
 
- public double pAmountDue(){
+ public void pAmountDue(){
      double discountAmount;
      double finalAmount;
      final double discount = 0.14;
@@ -21,7 +21,7 @@ public class shoppingTotal {
 
     finalAmount = (this.price  * this.quantity) - discountAmount ;
 
-    return finalAmount;
+     System.out.println("Amount Due: " + finalAmount);
  }
 }
 

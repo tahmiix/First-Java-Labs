@@ -3,7 +3,7 @@ package org.codewiththamsanqa;
 public class PassOrFail {
     int mark = 78;
 
-public String passOrFail(){
+public void passOrFail(){
     String result;
     if(this.mark < 0 || this.mark > 100 ){
         result = "Invalid Input";
@@ -13,6 +13,6 @@ public String passOrFail(){
         result = "fail";
     }
 
-    return result;
+    System.out.println(result);
 }
 }
