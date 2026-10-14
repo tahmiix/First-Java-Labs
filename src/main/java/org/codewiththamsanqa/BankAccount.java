@@ -32,4 +32,9 @@ public class BankAccount {
     void getBalance(){
         System.out.println(this.balance);
     }
+
+    void setAmount(double amount){
+        this.balance = amount;
+
+    }
 }
