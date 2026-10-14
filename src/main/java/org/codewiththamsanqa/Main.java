@@ -5,9 +5,16 @@ package org.codewiththamsanqa;
 public class Main {
     public static void main(String[] args) {
 
-        EvenOddArray eoa = new EvenOddArray();
+     Student st1 = new Student("Thamsanqa","222203082",49);
+     Student st2 = new Student("Gift","227303078",67);
 
-        eoa.SortAndCount();
+        st1.displayDetails();
+        System.out.println(st1.hasPassed());
+
+        st2.displayDetails();
+        System.out.println(st2.hasPassed());
+
+
 
 
         }
