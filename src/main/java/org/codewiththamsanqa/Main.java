@@ -5,15 +5,17 @@ package org.codewiththamsanqa;
 public class Main {
     public static void main(String[] args) {
 
-     Student st1 = new Student("Thamsanqa","222203082",49);
-     Student st2 = new Student("Gift","227303078",67);
+    BankAccount ba = new BankAccount("Thamsanqa",12345678,0);
 
-        st1.displayDetails();
-        System.out.println(st1.hasPassed());
+    ba.getBalance();
 
-        st2.displayDetails();
-        System.out.println(st2.hasPassed());
+    ba.deposit(0);
 
+    ba.getBalance();
+
+    ba.withdraw(300);
+
+    ba.getBalance();
 
 
 
