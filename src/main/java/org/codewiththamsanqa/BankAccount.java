@@ -22,8 +22,10 @@ public class BankAccount {
     }
 
     void withdraw(double amount){
-
-        if(this.balance < amount){
+        if(amount < 0){
+            System.out.println("Amount entered is invalid");
+        }
+        else if(this.balance < amount){
             System.out.println("Insufficient funds ");
         }else{
           this.balance =  this.balance - amount;

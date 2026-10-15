@@ -5,19 +5,36 @@ package org.codewiththamsanqa;
 public class Main {
     public static void main(String[] args) {
 
-    BankAccount ba = new BankAccount("Thamsanqa",12345678,0);
+        double student1[] = {-100,33,56};
+        double student2[] = {88,67,100};
+        double student3[] = {12,56,47};
 
-    ba.getBalance();
+        StudentMCalculator stu1 = new StudentMCalculator(222203082,"Thamsanqa",student1);
+        StudentMCalculator stu2 = new StudentMCalculator(222267890,"Gift",student2);
+        StudentMCalculator stu3 = new StudentMCalculator(222789088,"Ayanda",student3);
 
-    ba.deposit(0);
+        StudentMCalculator smc = new StudentMCalculator();
 
-    ba.getBalance();
+        //Averages
+       double avg1 = stu1.calculateAverage(student1);
+        double avg2 = stu2.calculateAverage(student2);
+        double avg3 = stu1.calculateAverage(student3);
 
-    ba.withdraw(300);
+        //passOrFail
+        stu1.passOrFail(avg1);
+        stu2.passOrFail(avg2);
+        stu3.passOrFail(avg3);
 
-    ba.getBalance();
+        //display
+        stu1.displaySummary();
+        stu2.displaySummary();
+        stu3.displaySummary();
+
+        smc.HighestAvg(avg1,avg2,avg3);
 
 
 
         }
     }
+
+
