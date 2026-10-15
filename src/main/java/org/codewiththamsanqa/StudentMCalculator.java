@@ -19,20 +19,13 @@ public class StudentMCalculator {
     }
 
     double calculateAverage(double[] marks){
-        double average;
+        double average = 0;
         double markSum = 0;
 
-        for(int i = 0; i < marks.length; i++){
+                for(int j = 0; j < marks.length; j++){
+                    markSum = markSum + marks[j];
 
-            if(marks[i] < 0 && marks[i] > 100){
-                System.out.println("Invalid Marks");
-            }
-        }
-
-        for(int i = 0; i < marks.length; i++){
-            markSum = markSum + marks[i];
-
-        }
+                }
 
         average = markSum/marks.length;
 
@@ -69,20 +62,22 @@ public class StudentMCalculator {
       }
     }
 
-    void HighestAvg(double avg1, double avg2, double avg3){
-        double HighestStu = 0;
-        double stuMarks[] = {avg1,avg2,avg3};
+    StudentMCalculator HighestAvg(StudentMCalculator[] students){
 
-        double max = stuMarks[0];
-        for(int i = 0; i < stuMarks.length; i++){
-            if(stuMarks[i] > max){
-                max = stuMarks[i];
+        StudentMCalculator max = students[0];
+
+        for(int i = 0; i < students.length; i++){
+            if(students[i].calculateAverage(students[i].marks) > max.calculateAverage(max.marks)){
+                max = students[i];
+
             }
 
         }
 
-        System.out.println("Highest Average: " + max);
+        return max;
 
     }
+
+
 
 }
