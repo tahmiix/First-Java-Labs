@@ -5,7 +5,7 @@ package org.codewiththamsanqa;
 public class Main {
     public static void main(String[] args) {
 
-        double student1[] = {-5,33,56};
+        double student1[] = {5,33,56};
         double student2[] = {88,67,100};
         double student3[] = {12,56,47};
 
