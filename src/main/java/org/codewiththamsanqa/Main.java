@@ -22,13 +22,21 @@ public class Main {
 
         System.out.println("Student with Highest Average: " + s.highestStudent(students).getName()); */
 
+             Employee emp = new Employee();
+            Employee emp1 = new Employee("Emp1232","Thamsanqa",50000);
+            Employee emp2 = new Employee("Emp2345","Gift",57000);
+            Employee emp3 = new Employee("Emp3456","Nosipho",47000);
+            Employee emp4 = new Employee("Emp4563","Brenda",75000);
+            Employee emp5 = new Employee("Emp4783","Lwazi",47000
+            );
 
-        StoreProduct sp = new StoreProduct();
+            Employee employees[] = {emp1,emp2,emp3,emp4,emp5};
 
-        StoreProduct product1 = new StoreProduct("Bread",23,2);
+            emp.displayEmpDetails(employees);
 
-        StoreProduct products[] = {product1};
+        System.out.println("Highest salary: " +emp.empHighestSalary(employees).getEmpSalary());
 
+        System.out.println("Average Salary: " + emp.averageSalary(employees));
         }
     }
 
