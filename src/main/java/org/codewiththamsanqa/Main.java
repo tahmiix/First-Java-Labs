@@ -5,41 +5,24 @@ package org.codewiththamsanqa;
 public class Main {
     public static void main(String[] args) {
 
-        double student1[] = {5,33,56};
-        double student2[] = {88,67,100};
-        double student3[] = {12,56,47};
+        int student1[] = {23,45,67};
+        int student2[] = {56,89,78};
+        int student3[] = {59,67,90};
 
+        StudentMCalculator s = new StudentMCalculator();
 
-        StudentMCalculator stu1 = new StudentMCalculator(222203082,"Thamsanqa",student1);
-        StudentMCalculator stu2 = new StudentMCalculator(222267890,"Gift",student2);
-        StudentMCalculator stu3 = new StudentMCalculator(222789088,"Ayanda",student3);
+        StudentMCalculator st1 =  new StudentMCalculator(12345678,"Thamsanqa",student1);
+        StudentMCalculator st2 =  new StudentMCalculator(87654321,"Gift",student2);
+        StudentMCalculator st3 =  new StudentMCalculator(56784321,"Nosipho",student3);
 
-        StudentMCalculator smc = new StudentMCalculator();
+        StudentMCalculator students[] = {st1,st2,st3};
 
-        StudentMCalculator[] studentList = {stu1,stu2,stu3};
+        s.displayStuSummary(st1);
+        s.displayStuSummary(st2);
+        s.displayStuSummary(st3);
 
-        //Averages
-       double avg1 = stu1.calculateAverage(student1);
-        double avg2 = stu2.calculateAverage(student2);
-        double avg3 = stu1.calculateAverage(student3);
+        System.out.println("Student with Highest Average: " + s.highestStudent(students).getName());
 
-        //passOrFail
-        stu1.passOrFail(avg1);
-        stu2.passOrFail(avg2);
-        stu3.passOrFail(avg3);
-
-        //display
-        stu1.displaySummary();
-        stu2.displaySummary();
-        stu3.displaySummary();
-
-        smc.HighestAvg(studentList);
-
-        //Highest student information
-        String name  = smc.HighestAvg(studentList).name;
-        int stuNum = smc.HighestAvg(studentList).studentNum;
-
-        System.out.println("Student with highest average is: " + name);
 
 
 

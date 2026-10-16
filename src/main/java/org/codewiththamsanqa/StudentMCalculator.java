@@ -1,83 +1,94 @@
 package org.codewiththamsanqa;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class StudentMCalculator {
     int studentNum;
     String name;
-    double[] marks = new double[3];
+    int[] marks = new int[3];
 
     StudentMCalculator(){
 
     }
-    StudentMCalculator(int studentNum,String name, double[] marks){
+
+    StudentMCalculator(int studentNum, String name, int[] marks){
         this.studentNum = studentNum;
         this.name = name;
         this.marks = marks;
 
     }
 
-    double calculateAverage(double[] marks){
-        double average = 0;
-        double markSum = 0;
+    String getName(){
 
-                for(int j = 0; j < marks.length; j++){
-                    markSum = markSum + marks[j];
+        return  this.name;
+    }
 
-                }
+    int getStudentNum(){
+        return this.studentNum;
+    }
 
-        average = markSum/marks.length;
+    int[] getMarks(){
+        return this.marks;
+    }
+
+    void setStudentNum(int setStudentNum) {
+        this.studentNum = setStudentNum;
+    }
+
+    void setName(String name){
+        this.name = name;
+    }
+
+    void setMarks(int[] marks){
+        this.marks = marks;
+    }
+
+
+    int calculateAvg(StudentMCalculator student){
+        int marksSum = 0;
+        int average;
+
+        for(int i = 0; i < student.marks.length; i++){
+            marksSum = marksSum + student.marks[i];
+        }
+
+        average = marksSum/student.marks.length;
 
         return average;
     }
 
-    boolean passOrFail(double avg){
+    String passOrFail(int avg){
         if(avg >= 50){
-            return true;
-
+            return "Passed";
         }else{
 
-            return false;
+            return "Failed";
         }
     }
 
-    void displaySummary(){
-        ArrayList<Double>stuMarks = new ArrayList<>();
+    void displayStuSummary(StudentMCalculator student){
+        ArrayList<Integer> marks = new ArrayList<>();
 
-        for(double mark: this.marks){
-            stuMarks.add(mark);
+        for (int mark : student.marks) {
+            marks.add(mark);
         }
 
-      if(passOrFail(calculateAverage(this.marks))){
-          System.out.println(" Student number: "+ this.studentNum+
-                            "\n Name: " + this.name +
-                            "\n Student marks: " + stuMarks +
-                            "\n Result: Passed");
-      }else{
-          System.out.println(" Student number: "+ this.studentNum+
-                  "\n Name: " + this.name +
-                  "\n Student marks: " + stuMarks +
-                  "\n Result: Failed");
-      }
+        System.out.println(" Student Name: " + student.getName()  +
+                "\n Student Number: " + student.getStudentNum() +
+                "\n Average: " + calculateAvg(student) +
+                "\n Result: " + passOrFail(calculateAvg(student)));
     }
 
-    StudentMCalculator HighestAvg(StudentMCalculator[] students){
-
-        StudentMCalculator max = students[0];
+    StudentMCalculator highestStudent(StudentMCalculator[] students){
+        StudentMCalculator highest = students[0];
 
         for(int i = 0; i < students.length; i++){
-            if(students[i].calculateAverage(students[i].marks) > max.calculateAverage(max.marks)){
-                max = students[i];
 
+            if(students[i].calculateAvg(students[i]) > highest.calculateAvg(highest)){
+                highest = students[i];
             }
-
         }
 
-        return max;
-
+        return highest;
     }
-
-
-
 }
