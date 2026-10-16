@@ -1,11 +1,10 @@
 package org.codewiththamsanqa;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
 
-        int student1[] = {23,45,67};
+       /* int student1[] = {23,45,67};
         int student2[] = {56,89,78};
         int student3[] = {59,67,90};
 
@@ -21,10 +20,14 @@ public class Main {
         s.displayStuSummary(st2);
         s.displayStuSummary(st3);
 
-        System.out.println("Student with Highest Average: " + s.highestStudent(students).getName());
+        System.out.println("Student with Highest Average: " + s.highestStudent(students).getName()); */
 
 
+        StoreProduct sp = new StoreProduct();
 
+        StoreProduct product1 = new StoreProduct("Bread",23,2);
+
+        StoreProduct products[] = {product1};
 
         }
     }

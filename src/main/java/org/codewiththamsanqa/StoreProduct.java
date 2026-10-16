@@ -5,30 +5,30 @@ public class StoreProduct {
     double price;
     int quantity;
 
-    StoreProduct(){
+    StoreProduct() {
 
     }
 
-    StoreProduct(String name, double price, int quantity){
+    StoreProduct(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
 
     }
 
-    void setName(String name){
+    void setName(String name) {
         this.name = name;
     }
 
-    void setPrice(double price){
+    void setPrice(double price) {
         this.price = price;
     }
 
-    void setQuantity(int quantity){
+    void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    String getName(){
+    String getName() {
         return this.name;
     }
 
@@ -38,5 +38,16 @@ public class StoreProduct {
 
     public int getQuantity() {
         return quantity;
+    }
+
+
+    double calculateLineTotal(StoreProduct[] product){
+        double lineTotal = 0;
+
+        for(StoreProduct products : product){
+            lineTotal = lineTotal + products.price;
+        }
+
+        return lineTotal;
     }
 }
