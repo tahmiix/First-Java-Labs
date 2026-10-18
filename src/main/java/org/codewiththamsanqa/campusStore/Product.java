@@ -74,15 +74,17 @@ public class Product {
     void displayProductAndSubtotal(Product[] products){
        for(Product p : products) {
 
-           System.out.println("Item Name" + p.getProductName() +
+           System.out.println("Item Name: " + p.getProductName() +
                                 "\nPrice: " + p.getProductPrice() +
                                 "\nQuantity: " + p.getProductQuantity()+
                                 "\n   ========================   ");
        }
 
-        System.out.println("Subtotal: " + calSubTotal(products));
-        System.out.println("Discount: " + calDiscount(products));
+        System.out.println("Subtotal: R" + calSubTotal(products));
 
+       if(calDiscount(products) > 0) {
+           System.out.println("Discount: R" + calDiscount(products));
+       }
 
     }
 
@@ -92,11 +94,24 @@ public class Product {
             if(userInput.equals(p.getProductID()) || userInput.equals(p.getProductName())){
                 foundOrNot =  "Product Found" +
                         "\nQuantity in stock: "+ p.getProductQuantity() +
-                        "\nPrice :" + p.getProductPrice();
+                        "\nPrice : R" + p.getProductPrice();
 
             }
         }
 
         return foundOrNot;
+    }
+
+    void finalReciept(Product[] products){
+        double finalAmount = 0;
+
+        finalAmount = calSubTotal(products) - calDiscount(products);
+
+        System.out.println("Mecer inter-ed Spaza \n======================");
+        displayProductAndSubtotal(products);
+        System.out.println("Amount Due: R" + finalAmount);
+
+
+
     }
 }
